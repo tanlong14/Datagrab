@@ -1,0 +1,14 @@
+//Navigation
+nav {
+    flex: 1 6 20%;
+    order: 1;
+}
+
+/* Trop étroit pour supporter 3 colonnes */
+@media all and (max-width: 640px) {  
+    nav {
+        order: 0; /* Return them to document order */
+        min-height: 50px;
+        max-height: 50px;
+    }
+}

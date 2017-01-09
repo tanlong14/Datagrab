@@ -1,0 +1,17 @@
+//Header
+header {
+    display: block;   
+    min-height: 100px;
+}
+
+/* Trop étroit pour supporter 3 colonnes */
+@media all and (max-width: 640px) {  
+    header {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
+
+.part-right {
+    flex: 1 1 auto;
+}

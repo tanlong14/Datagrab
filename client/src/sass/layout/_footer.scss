@@ -1,0 +1,13 @@
+//Footer
+footer {
+    display: block;   
+    min-height: 100px;
+}
+
+/* Trop étroit pour supporter 3 colonnes */
+@media all and (max-width: 640px) {  
+    footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}

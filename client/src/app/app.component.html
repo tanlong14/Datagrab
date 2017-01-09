@@ -1,0 +1,57 @@
+
+<header class="border" [class.m2app-dark]="isDarkTheme">
+    <md-toolbar>
+        <!-- First menu -->
+        <span>{{ nameApp }}</span>
+        <button md-button [routerLink]=" ['./model'] ">Model Component</button>
+        <button md-raised-button color="warn" (click)="isDarkTheme = !isDarkTheme">TOGGLE THEME</button>
+        <span class="part-right"></span>
+
+        <!-- Select lang --> 
+<!--        <button md-icon-button [md-menu-trigger-for]="mLang" aria-label="Open Menu Langue #TODO TRAD">
+            <md-icon>more_vert</md-icon>
+        </button>
+        <md-menu x-position="before" #mLang="mdMenu"> 
+ -->           <!-- TODO: add pre-select item en fonction de la langue -->           
+<!--            <button md-menu-item *ngFor="let lang of translate.getLangs()" [value]="lang">
+                <md-icon> home </md-icon>
+                {{ lang }}
+            </button>            
+        </md-menu>        
+ -->       <!--<select #langSelect (change)="translate.use(langSelect.value)">
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+        </select>-->
+
+        <!--Boucle menu -->
+        <md-toolbar-row>
+            <md-tab-group md-dynamic-height md-stretch-tabs>
+                <md-tab *ngFor="let menu of getMenu()" [disabled]="menu.disabled">
+                    <template md-tab-label>
+                        <!--<md-icon md-list-avatar>{{ menu.icon }}</md-icon>-->
+                        {{menu.name}}
+                    </template>                
+                    <span>{{menu.content}}</span>                
+                </md-tab>
+            </md-tab-group>
+        </md-toolbar-row>        
+    </md-toolbar>
+</header>
+
+<main>
+	<nav class="border">
+        <md-nav-list>
+            <a md-list-item href="{{data.link}}" *ngFor="let data of getDataObjectTransport()">
+                 {{ data.i18n }}
+                <md-icon md-list-avatar>{{ data.icon }}</md-icon>
+                <h4 md-line>{{ data.name }}</h4>
+                <p ng-if="data.description!='' && data.description!=null" md-line> {{data.description}} </p>
+             </a>
+        </md-nav-list>
+    </nav>
+    <section class="border">
+      <router-outlet></router-outlet>
+    </section>
+    <aside class="border" i18n>Traduction du texte Sidebar</aside>
+</main>
+
+<footer class="border">Footer</footer>

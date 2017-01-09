@@ -1,0 +1,15 @@
+//Main
+main {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+
+/* Trop étroit pour supporter 3 colonnes */
+@media all and (max-width: 640px) {  
+    main {
+        flex-direction: column;
+    }
+}

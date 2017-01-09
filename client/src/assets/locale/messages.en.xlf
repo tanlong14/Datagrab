@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="b7b748358f0f188e64c995525baad6e937f9fb7a" datatype="html">
+        <source>Traduction du texte Sidebar</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="6ec98fa3d6504ba1fd03465194b53706c8263c99" datatype="html">
+        <source>Model</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
